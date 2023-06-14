@@ -1,0 +1,24 @@
+kelime = list("Jelibon".lower())
+kutu = len(kelime) * ["-"]
+y=True
+print(kutu)
+puan=0
+hak=5
+while y:
+    if "-" in kutu and hak>0:
+        harf = input("bir harf giriniz:")
+        harf=harf.lower()
+        if harf in kelime:
+            for i in range(len(kelime)):
+                if kelime[i] == harf:
+                    kutu[i] = harf
+                    puan+=1
+            print(kutu)
+        else:
+            print(kutu)
+            hak-=1
+            print(f"kalan hakkınız: {hak}")
+    else:
+        print("oyun bitti")
+        print(f"Puanınız: {puan}")
+        y=False
