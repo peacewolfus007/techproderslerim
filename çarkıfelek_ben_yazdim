@@ -22,3 +22,16 @@ while y:
         print("oyun bitti")
         print(f"Puanınız: {puan}")
         y=False
+
+
+#EK:
+def fake_isdigit(x):
+    y=list(x)
+    listek=["0","1","2","3","4","5","6","7","8","9"]
+    for i in y:
+        if i  not in listek:
+            return False
+            break
+    else:
+        return True
+fake_isdigit("58886q56")
